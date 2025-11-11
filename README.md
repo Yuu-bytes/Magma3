@@ -4,36 +4,36 @@ Sistema de gerenciamento e monitoramento de ativos desenvolvido com .NET 8 e Mon
 
 ## ?? Sobre o Projeto
 
-Magma3 é uma aplicação que integra com a API do Magma-3 para gerenciar ativos, computadores e clientes. O projeto segue os princípios de Clean Architecture com separação em camadas (Domain, Application, Infrastructure e Presentation).
+Magma3 Ã© uma aplicaÃ§Ã£o que integra com a API do Magma-3 para gerenciar ativos, computadores e clientes. O projeto segue os princÃ­pios de Clean Architecture com separaÃ§Ã£o em camadas (Domain, Application, Infrastructure e Presentation).
 
 ## ??? Arquitetura
 
-O projeto está organizado em 5 projetos principais:
+O projeto estÃ¡ organizado em 5 projetos principais:
 
 - **Magma3**: API principal (Web API)
-- **Magma3.Application**: Camada de aplicação (Use Cases, CQRS com MediatR)
-- **Magma3.Domain**: Camada de domínio (Entidades, Interfaces)
-- **Magma3.Infrastructure**: Camada de infraestrutura (Repositórios, MongoDB)
-- **Magma3.WebClient**: Cliente HTTP para integração com API externa
+- **Magma3.Application**: Camada de aplicaÃ§Ã£o (Use Cases, CQRS com MediatR)
+- **Magma3.Domain**: Camada de domÃ­nio (Entidades, Interfaces)
+- **Magma3.Infrastructure**: Camada de infraestrutura (RepositÃ³rios, MongoDB)
+- **Magma3.WebClient**: Cliente HTTP para integraÃ§Ã£o com API externa
 
 ## ?? Tecnologias
 
 - **.NET 8**
 - **MongoDB** - Banco de dados NoSQL
-- **MediatR** - Implementação de CQRS e Mediator Pattern
-- **Swagger/OpenAPI** - Documentação da API
-- **Docker & Docker Compose** - Containerização
-- **Rate Limiting** - Controle de taxa de requisições
+- **MediatR** - ImplementaÃ§Ã£o de CQRS e Mediator Pattern
+- **Swagger/OpenAPI** - DocumentaÃ§Ã£o da API
+- **Docker & Docker Compose** - ContainerizaÃ§Ã£o
+- **Rate Limiting** - Controle de taxa de requisiÃ§Ãµes
 
-## ?? Pré-requisitos
+## ?? PrÃ©-requisitos
 
 - [.NET 8 SDK](https://dotnet.microsoft.com/download/dotnet/8.0)
 - [Docker](https://www.docker.com/get-started) e [Docker Compose](https://docs.docker.com/compose/install/)
 - Visual Studio 2022 ou VS Code
 
-## ?? Configuração
+## ?? ConfiguraÃ§Ã£o
 
-### 1. Clone o repositório
+### 1. Clone o repositÃ³rio
 
 ```bash
 git clone https://github.com/Yuu-bytes/Magma3.git
@@ -48,13 +48,13 @@ Inicie o MongoDB e o Mongo Express:
 docker-compose up -d
 ```
 
-Isso irá:
+Isso irÃ¡:
 - Criar o container MongoDB na porta **27017**
 - Criar o Mongo Express (interface web) na porta **8081**
-- Configurar autenticação com as credenciais definidas
+- Configurar autenticaÃ§Ã£o com as credenciais definidas
 
 **Credenciais do MongoDB:**
-- Usuário: `admin`
+- UsuÃ¡rio: `admin`
 - Senha: `admin123`
 - Database: `magma3db`
 
@@ -63,7 +63,7 @@ Isso irá:
 
 ### 3. Configure o appsettings.json
 
-Ajuste as configurações em `Magma3/appsettings.json`:
+Ajuste as configuraÃ§Ãµes em `Magma3/appsettings.json`:
 
 ```json
 {
@@ -85,7 +85,7 @@ Ajuste as configurações em `Magma3/appsettings.json`:
 }
 ```
 
-### 4. Execute a aplicação
+### 4. Execute a aplicaÃ§Ã£o
 
 ```bash
 cd Magma3
@@ -94,7 +94,7 @@ dotnet run
 
 Ou use o Visual Studio (F5).
 
-A API estará disponível em:
+A API estarÃ¡ disponÃ­vel em:
 - **HTTPS**: https://localhost:7000
 - **HTTP**: http://localhost:5000
 - **Swagger**: https://localhost:7000/swagger
@@ -114,25 +114,25 @@ A API estará disponível em:
 
 - `GET /api/Products` - Lista produtos
 
-## ?? Autenticação
+## ?? AutenticaÃ§Ã£o
 
-A API usa autenticação via **ApiKey** no header:
+A API usa autenticaÃ§Ã£o via **ApiKey** no header:
 
 ```
-ApiKey: 00000000-0000-0000-0000-000000000000
+ApiKey: 9da0c852-1a10-4399-ac98-969577625c1f
 ```
 
 Configure sua ApiKey no Swagger UI para testar os endpoints.
 
 ## ? Rate Limiting
 
-A API implementa rate limiting com as seguintes configurações padrão:
+A API implementa rate limiting com as seguintes configuraÃ§Ãµes padrÃ£o:
 
-- **Limite**: 100 requisições
+- **Limite**: 100 requisiÃ§Ãµes
 - **Janela**: 30 segundos
-- **Fila**: 10 requisições
+- **Fila**: 10 requisiÃ§Ãµes
 
-Quando o limite é excedido, a API retorna status **429 Too Many Requests**.
+Quando o limite Ã© excedido, a API retorna status **429 Too Many Requests**.
 
 ## ??? Estrutura de Pastas
 
@@ -142,23 +142,23 @@ Magma3/
 ?   ??? Controllers/       # Controllers da API
 ?   ??? Properties/
 ?   ??? appsettings.json
-??? Magma3.Application/     # Camada de Aplicação
+??? Magma3.Application/     # Camada de AplicaÃ§Ã£o
 ?   ??? Assets/
 ?   ?   ??? Queries/       # Queries CQRS
 ?   ??? Clientes/
 ?   ??? Products/
-??? Magma3.Domain/    # Camada de Domínio
-?   ??? Entities/               # Entidades do domínio
+??? Magma3.Domain/    # Camada de DomÃ­nio
+?   ??? Entities/               # Entidades do domÃ­nio
 ??? Magma3.Infrastructure/  # Camada de Infraestrutura
-?   ??? Persistence/  # Repositórios MongoDB
+?   ??? Persistence/  # RepositÃ³rios MongoDB
 ?   ??? DependencyInjection.cs
 ??? Magma3.WebClient/        # Cliente HTTP
 ?   ??? WebClient/
-??? docker-compose.yml              # Configuração Docker
+??? docker-compose.yml              # ConfiguraÃ§Ã£o Docker
 ??? README.md
 ```
 
-## ?? Comandos Docker Úteis
+## ?? Comandos Docker Ãšteis
 
 ### Verificar status dos containers
 ```bash
@@ -191,9 +191,9 @@ docker-compose restart
 dotnet test
 ```
 
-## ?? Documentação da API
+## ?? DocumentaÃ§Ã£o da API
 
-Após iniciar a aplicação, acesse a documentação Swagger em:
+ApÃ³s iniciar a aplicaÃ§Ã£o, acesse a documentaÃ§Ã£o Swagger em:
 
 ```
 https://localhost:7000/swagger
@@ -203,25 +203,25 @@ https://localhost:7000/swagger
 
 1. Fork o projeto
 2. Crie uma branch para sua feature (`git checkout -b feature/AmazingFeature`)
-3. Commit suas mudanças (`git commit -m 'Add some AmazingFeature'`)
+3. Commit suas mudanÃ§as (`git commit -m 'Add some AmazingFeature'`)
 4. Push para a branch (`git push origin feature/AmazingFeature`)
 5. Abra um Pull Request
 
-## ?? Licença
+## ?? LicenÃ§a
 
-Este projeto está sob a licença MIT. Veja o arquivo `LICENSE` para mais detalhes.
+Este projeto estÃ¡ sob a licenÃ§a MIT. Veja o arquivo `LICENSE` para mais detalhes.
 
 ## ????? Autor
 
 - GitHub: [@Yuu-bytes](https://github.com/Yuu-bytes)
 
-## ?? Links Úteis
+## ?? Links Ãšteis
 
-- [Documentação .NET 8](https://learn.microsoft.com/dotnet/core/whats-new/dotnet-8)
+- [DocumentaÃ§Ã£o .NET 8](https://learn.microsoft.com/dotnet/core/whats-new/dotnet-8)
 - [MongoDB Documentation](https://docs.mongodb.com/)
 - [MediatR](https://github.com/jbogard/MediatR)
 - [Swagger/OpenAPI](https://swagger.io/)
 
 ---
 
-? Se este projeto foi útil para você, considere dar uma estrela no repositório!
+? Se este projeto foi Ãºtil para vocÃª, considere dar uma estrela no repositÃ³rio!
