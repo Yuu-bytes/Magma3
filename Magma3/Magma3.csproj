@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MediatR" Version="13.1.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Magma3.Application\Magma3.Application.csproj" />
+    <ProjectReference Include="..\Magma3.Infraestructure\Magma3.Infraestructure.csproj" />
+    <ProjectReference Include="..\Magma3.WebClient\Magma3.WebClient.csproj" />
+    <ProjectReference Include="..\Magma3.Domain\Magma3.Domain.csproj" />
+  </ItemGroup>
+
+</Project>
