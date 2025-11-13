@@ -138,24 +138,24 @@ Quando o limite é excedido, a API retorna status **429 Too Many Requests**.
 
 ```
 Magma3/
-??? Magma3/  # API Web
-?   ??? Controllers/       # Controllers da API
-?   ??? Properties/
-?   ??? appsettings.json
-??? Magma3.Application/     # Camada de Aplicação
-?   ??? Assets/
-?   ?   ??? Queries/       # Queries CQRS
-?   ??? Clientes/
-?   ??? Products/
-??? Magma3.Domain/    # Camada de Domínio
-?   ??? Entities/               # Entidades do domínio
-??? Magma3.Infrastructure/  # Camada de Infraestrutura
-?   ??? Persistence/  # Repositórios MongoDB
-?   ??? DependencyInjection.cs
-??? Magma3.WebClient/        # Cliente HTTP
-?   ??? WebClient/
-??? docker-compose.yml              # Configuração Docker
-??? README.md
+  Magma3/  # API Web
+  Controllers/       # Controllers da API
+  Properties/
+  appsettings.json
+Magma3.Application/     # Camada de Aplicação
+  Assets/
+    Queries/       # Queries CQRS
+  Clientes/
+  Products/
+Magma3.Domain/    # Camada de Domínio
+  Entities/               # Entidades do domínio
+Magma3.Infrastructure/  # Camada de Infraestrutura
+  Persistence/  # Repositórios MongoDB
+  DependencyInjection.cs
+Magma3.WebClient/        # Cliente HTTP
+  WebClient/
+docker-compose.yml              # Configuração Docker
+README.md
 ```
 
 ## Comandos Docker Úteis
