@@ -2,11 +2,11 @@
 
 Sistema de gerenciamento e monitoramento de ativos desenvolvido com .NET 8 e MongoDB.
 
-## ?? Sobre o Projeto
+## Sobre o Projeto
 
 Magma3 é uma aplicação que integra com a API do Magma-3 para gerenciar ativos, computadores e clientes. O projeto segue os princípios de Clean Architecture com separação em camadas (Domain, Application, Infrastructure e Presentation).
 
-## ??? Arquitetura
+## Arquitetura
 
 O projeto está organizado em 5 projetos principais:
 
@@ -16,7 +16,7 @@ O projeto está organizado em 5 projetos principais:
 - **Magma3.Infrastructure**: Camada de infraestrutura (Repositórios, MongoDB)
 - **Magma3.WebClient**: Cliente HTTP para integração com API externa
 
-## ?? Tecnologias
+## Tecnologias
 
 - **.NET 8**
 - **MongoDB** - Banco de dados NoSQL
@@ -25,13 +25,13 @@ O projeto está organizado em 5 projetos principais:
 - **Docker & Docker Compose** - Containerização
 - **Rate Limiting** - Controle de taxa de requisições
 
-## ?? Pré-requisitos
+## Pré-requisitos
 
 - [.NET 8 SDK](https://dotnet.microsoft.com/download/dotnet/8.0)
 - [Docker](https://www.docker.com/get-started) e [Docker Compose](https://docs.docker.com/compose/install/)
 - Visual Studio 2022 ou VS Code
 
-## ?? Configuração
+## Configuração
 
 ### 1. Clone o repositório
 
@@ -99,7 +99,7 @@ A API estará disponível em:
 - **HTTP**: http://localhost:5000
 - **Swagger**: https://localhost:7000/swagger
 
-## ?? Endpoints Principais
+## Endpoints Principais
 
 ### Assets
 
@@ -114,7 +114,7 @@ A API estará disponível em:
 
 - `GET /api/Products` - Lista produtos
 
-## ?? Autenticação
+## Autenticação
 
 A API usa autenticação via **ApiKey** no header:
 
@@ -124,7 +124,7 @@ ApiKey: 9da0c852-1a10-4399-ac98-969577625c1f
 
 Configure sua ApiKey no Swagger UI para testar os endpoints.
 
-## ? Rate Limiting
+## Rate Limiting
 
 A API implementa rate limiting com as seguintes configurações padrão:
 
@@ -134,7 +134,7 @@ A API implementa rate limiting com as seguintes configurações padrão:
 
 Quando o limite é excedido, a API retorna status **429 Too Many Requests**.
 
-## ??? Estrutura de Pastas
+## Estrutura de Pastas
 
 ```
 Magma3/
@@ -158,7 +158,7 @@ Magma3/
 ??? README.md
 ```
 
-## ?? Comandos Docker Úteis
+## Comandos Docker Úteis
 
 ### Verificar status dos containers
 ```bash
@@ -185,13 +185,13 @@ docker-compose down -v
 docker-compose restart
 ```
 
-## ?? Testes
+## Testes
 
 ```bash
 dotnet test
 ```
 
-## ?? Documentação da API
+## Documentação da API
 
 Após iniciar a aplicação, acesse a documentação Swagger em:
 
@@ -199,7 +199,7 @@ Após iniciar a aplicação, acesse a documentação Swagger em:
 https://localhost:7000/swagger
 ```
 
-## ?? Contribuindo
+## Contribuindo
 
 1. Fork o projeto
 2. Crie uma branch para sua feature (`git checkout -b feature/AmazingFeature`)
@@ -207,21 +207,17 @@ https://localhost:7000/swagger
 4. Push para a branch (`git push origin feature/AmazingFeature`)
 5. Abra um Pull Request
 
-## ?? Licença
+## Licença
 
 Este projeto está sob a licença MIT. Veja o arquivo `LICENSE` para mais detalhes.
 
-## ????? Autor
+## Autor
 
 - GitHub: [@Yuu-bytes](https://github.com/Yuu-bytes)
 
-## ?? Links Úteis
+## Links Úteis
 
 - [Documentação .NET 8](https://learn.microsoft.com/dotnet/core/whats-new/dotnet-8)
 - [MongoDB Documentation](https://docs.mongodb.com/)
 - [MediatR](https://github.com/jbogard/MediatR)
 - [Swagger/OpenAPI](https://swagger.io/)
-
----
-
-? Se este projeto foi útil para você, considere dar uma estrela no repositório!
